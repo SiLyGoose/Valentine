@@ -1,0 +1,288 @@
+.mainContainer {
+	/* gap: 0.5rem; */
+}
+
+.navHeader {
+	background: var(--offwhite);
+	gap: 0.5rem;
+}
+
+.logo {
+	background-image: url("/Starch.svg");
+}
+
+.text {
+	color: var(--smoke-gray);
+	font-size: clamp(1rem, 10vh, 2rem);
+}
+
+.cardWrapper {
+	position: relative;
+}
+
+.cardWrapper .textWrapper {
+	gap: 0.75rem;
+}
+
+.cardWrapper span {
+	color: var(--offwhite);
+	font-size: clamp(1rem, 10vh, 2rem);
+}
+
+.cardWrapper .name {
+	font-weight: 500;
+}
+
+.cardWrapper .age {
+	font-weight: 300;
+	font-size: clamp(0.75rem, 10vh, 1.75rem);
+}
+
+.cardWrapper .hook {
+	width: 100%;
+
+	animation: backgroundPan 3s linear infinite;
+	background: linear-gradient(to right, var(--bronze), var(--peach), var(--bronze));
+	background-size: 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	white-space: nowrap;
+
+	font-size: clamp(0.5rem, 10vh, 1.5rem);
+}
+
+.navHeader .text {
+	color: transparent;
+	font-size: clamp(1.5rem, 10vh, 2.5rem);
+}
+
+.textMask > .text {
+	background-color: var(--smoke-gray);
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+.navHeader,
+.cardContainer {
+	box-shadow: inset 0 -2px 0 0 rgba(100, 121, 143, 0.122);
+}
+
+.cardWrapper {
+	position: relative;
+	height: clamp(400px, 75vh, 800px);
+	width: clamp(300px, 90vw, 450px);
+}
+
+.cardImage {
+	height: 100%;
+	width: 100%;
+
+	background-image: url("/cute_boy_24.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	background-clip: padding-box;
+	border-radius: 10px;
+}
+
+.imageMask {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	top: 0;
+	background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.imageMask,
+.optionsContainer {
+	opacity: 0;
+	will-change: opacity;
+	transition: opacity 300ms ease;
+}
+
+.optionsContainer {
+	transition-duration: 200ms;
+}
+
+.focusMask > :is(.imageMask, .optionsContainer) {
+	opacity: 1;
+}
+
+.focusMask > .optionsContainer {
+	transition-delay: 100ms;
+}
+
+.focusMask .iconContainer {
+	z-index: 1;
+}
+
+.cardImage,
+.imageMask {
+	border-radius: 10px;
+}
+
+.ribbonMask {
+	position: absolute;
+	padding-block: 0.5rem;
+
+	color: var(--dark-gray);
+	background: var(--baby-pink);
+	box-shadow: 0 0 0 999px var(--baby-pink);
+	clip-path: inset(0 -100%);
+
+	inset: 0 0 auto auto;
+	transform-origin: 0 0;
+	transform: translate(29.3%) rotate(45deg);
+}
+
+.logoContainer,
+.iconContainer {
+	width: fit-content;
+	height: fit-content;
+
+	will-change: background-color;
+	transition: background-color 300ms ease;
+}
+
+.iconContainer:hover svg {
+	animation: zoomOutIn 300ms linear forwards;
+}
+
+.iconContainer[data-option="pass"]:hover {
+	background-color: rgba(254, 66, 92, 0.5);
+}
+
+.iconContainer[data-option="like"]:hover {
+	background-color: rgba(66, 245, 167, 0.5);
+}
+
+.iconContainer[data-option="message"]:hover {
+	background-color: rgba(54, 174, 250, 0.5);
+}
+
+.iconContainer[data-option="call"]:hover {
+	background-color: rgba(196, 84, 247, 0.5);
+}
+
+.iconContainer > svg {
+	width: clamp(20px, 10vw, 30px);
+	height: clamp(20px, 10vw, 30px);
+}
+
+.iconContainer {
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.navIconContainer {
+	display: flex;
+}
+
+.logo,
+.navIconContainer > div {
+	height: clamp(30px, 10vh, 40px);
+	width: clamp(30px, 10vh, 40px);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.navIconContainer > svg {
+	height: clamp(20px, 10vh, 30px);
+	width: clamp(20px, 10vh, 30px);
+}
+
+@keyframes backgroundPan {
+	from {
+		background-position: 0% center;
+	}
+
+	to {
+		background-position: -200% center;
+	}
+}
+
+@keyframes zoomOutIn {
+	from,
+	to {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.9);
+	}
+}
+
+.popup {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+
+	z-index: 10;
+}
+
+.popup > .popupMask {
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+	background-color: var(--smoke-gray);
+}
+
+.popupContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: center; */
+	gap: 1rem;
+
+	position: absolute;
+	height: clamp(200px + 1rem, 50vh, 350px);
+	width: clamp(300px, 20vw, 450px);
+
+	top: 50%;
+	left: 50%;
+
+	background-color: var(--offwhite);
+	transform: translate(-50%, -50%);
+
+	border-radius: 10px;
+	padding: clamp(1rem, 5vw, 2rem);
+}
+
+.popupContainer > .prompt {
+	text-align: center;
+}
+
+.popupContainer > .choices {
+	display: flex;
+	flex-direction: column;
+}
+
+.popupContainer > .choices > div {
+	border-radius: 3rem;
+	padding: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+.popupContainer > .choices > div > .text {
+	font-size: clamp(1.25rem, 10%, 2.25rem);
+	text-transform: uppercase;
+}
+
+.popupContainer > .choices > div:first-child {
+	background-color: var(--baby-pink);
+}
+
+.popupContainer > .choices > div:first-child > .text {
+	opacity: 1 !important;
+	color: var(--smoke-gray) !important;
+}
+
+.popupContainer > .choices > div:last-child > .text {
+	opacity: 0.5;
+	color: var(--gray-50);
+	font-size: clamp(1rem, 10%, 2rem);
+}

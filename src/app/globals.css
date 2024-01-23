@@ -1,0 +1,49 @@
+:root {
+	--gray: rgb(111, 111, 111);
+	--gray-50: rgba(111, 111, 111, 0.5);
+
+	--smoke-gray: rgb(28, 29, 37);
+	--smoke-gray-30: rgba(28, 29, 37, 0.3);
+
+	--offwhite: rgb(235, 235, 235);
+
+	--pastel-pink: rgb(255, 218, 244);
+	--baby-pink: rgb(255, 185, 234);
+
+	--baby-blue: rgb(173, 216, 230);
+
+	--bronze: rgb(217, 159, 80);
+	--peach: rgb(238, 209, 158);
+
+	--potato-brown: rgb(197, 161, 113);
+
+	--pass-red: rgb(254, 66, 92);
+	--like-green: rgb(66, 245, 167);
+	--message-blue: rgb(54, 174, 250);
+	--call-purple: rgb(196, 84, 247);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	line-height: 1;
+}
+
+body {
+	background-color: var(--offwhite) !important;
+	height: 100vh;
+
+	/* -webkit-font-smoothing: antialiased; */
+}
