@@ -21,7 +21,7 @@ export default function Home() {
 						document.getElementById("valentineFinder").style.display = "none";
 					}, 850);
 				}}
-				className={clsx(styles.popup, { [styles.hide]: initialized })}
+				className={clsx(styles.popup, styles.landingPopup, { [styles.hide]: initialized })}
 			>
 				<div className={styles.popupMask} />
 				<div className={styles.popupContainer}>
