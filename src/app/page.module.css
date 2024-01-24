@@ -223,6 +223,7 @@
 	width: 100vw;
 
 	z-index: 10;
+	transition: opacity 450ms ease 400ms;
 }
 
 .popup > .popupMask {
@@ -230,6 +231,11 @@
 	width: 100%;
 	opacity: 0.5;
 	background-color: var(--smoke-gray);
+}
+
+.mainContainer .popupMask {
+	opacity: 1;
+	background-color: var(--offwhite);
 }
 
 .popupContainer {
@@ -253,8 +259,17 @@
 	padding: clamp(1rem, 5vw, 2rem);
 }
 
+.mainContainer .popupContainer {
+	width: 100%;
+	height: 100%;
+
+	justify-content: center;
+	align-items: center;
+}
+
 .popupContainer > .prompt {
 	text-align: center;
+	transition: opacity 300ms ease;
 }
 
 .popupContainer > .choices {
@@ -285,4 +300,18 @@
 	opacity: 0.5;
 	color: var(--gray-50);
 	font-size: clamp(1rem, 10%, 2rem);
+}
+
+.mainContainer .prompt > span {
+	font-size: clamp(1.5rem, 10%, 2.5rem);
+}
+
+.hide,
+.hide .prompt {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+	z-index: 10;
 }
