@@ -74,18 +74,77 @@
 	width: clamp(300px, 90vw, 450px);
 }
 
-.cardImage {
+.carouselIndexContainer {
+	position: absolute;
+	height: 3px;
+	width: 90%;
+	
+	top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	display: grid;
+	gap: 1rem;
+	z-index: 11;
+}
+
+.carouselIndex {
+	opacity: 0.6;
+	background-color: var(--smoke-gray);
+	transition: all 300ms ease;
+}
+
+.carouselIndex.activeIndex {
+	background-color: var(--offwhite);
+}
+
+.carouselContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+.cardImageCarousel {
 	height: 100%;
 	width: 100%;
 
-	background-image: url("/cute_boy_24.jpg");
+	display: flex;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+}
+
+.cardImageCarousel.dragging .cardImageWrapper {
+	user-select: none;
+}
+
+.cardImageWrapper {
+	height: 100%;
+	min-width: 100%;
+
+	scroll-snap-align: center;
+}
+
+.cardImage {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+
+/* .cardImage {
+	height: 100%;
+	min-width: 100%;
+
+	background-image: url("/cute_boy_1_24.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	background-clip: padding-box;
 	border-radius: 10px;
-}
+} */
 
 .imageMask {
 	position: absolute;
@@ -98,6 +157,7 @@
 
 .imageMask,
 .optionsContainer {
+	z-index: -1;
 	opacity: 0;
 	will-change: opacity;
 	transition: opacity 300ms ease;
@@ -108,6 +168,7 @@
 }
 
 .focusMask > :is(.imageMask, .optionsContainer) {
+	z-index: 10;
 	opacity: 1;
 }
 
@@ -128,7 +189,7 @@
 	position: absolute;
 	padding-block: 0.5rem;
 
-	color: var(--dark-gray);
+	color: var(--smoke-gray);
 	background: var(--baby-pink);
 	box-shadow: 0 0 0 999px var(--baby-pink);
 	clip-path: inset(0 -100%);

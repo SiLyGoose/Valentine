@@ -9,7 +9,7 @@ import NavBar from "@/app/components/NavBar";
 import Header from "@/app/components/Header";
 
 export default function Home() {
-	const [initialized, setInitialized] = useState(false);
+	const [initialized, setInitialized] = useState(true);
 
 	return (
 		<main className={clsx("d-flex flex-column h-100 justify-content-between", styles.mainContainer)}>
