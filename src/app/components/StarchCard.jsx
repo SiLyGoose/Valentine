@@ -110,7 +110,7 @@ export default function StarchCard() {
 
 	return (
 		<>
-			<div className={clsx("d-flex h-100 w-100 pb-2 align-items-center justify-content-center overflow-hidden", styles.cardContainer)}>
+			<div className={clsx("d-flex h-100 w-100 align-items-center justify-content-center overflow-hidden", styles.cardContainer)}>
 				<div data-focus id="cardWrapper" className={styles.cardWrapper}>
 					<div id="carouselIndexContainer" className={styles.carouselIndexContainer}>
 						{images.map((_, index) => (

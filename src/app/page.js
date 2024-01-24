@@ -9,7 +9,7 @@ import NavBar from "@/app/components/NavBar";
 import Header from "@/app/components/Header";
 
 export default function Home() {
-	const [initialized, setInitialized] = useState(true);
+	const [initialized, setInitialized] = useState(false);
 
 	return (
 		<main className={clsx("d-flex flex-column h-100 justify-content-between", styles.mainContainer)}>
@@ -27,7 +27,7 @@ export default function Home() {
 				<div className={styles.popupContainer}>
 					<div className={styles.prompt}>
 						<span>
-							Find your <span style={{ color: "var(--baby-pink)" }}>Valentine</span> today!
+							Find your <span style={{ color: "var(--baby-pink)" }}>Starchmate</span> today!
 						</span>
 					</div>
 				</div>

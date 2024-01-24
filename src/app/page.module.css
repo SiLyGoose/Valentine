@@ -115,10 +115,6 @@
 	scroll-snap-type: x mandatory;
 }
 
-.cardImageCarousel.dragging .cardImageWrapper {
-	user-select: none;
-}
-
 .cardImageWrapper {
 	height: 100%;
 	min-width: 100%;
@@ -130,21 +126,7 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
-	pointer-events: none;
 }
-
-/* .cardImage {
-	height: 100%;
-	min-width: 100%;
-
-	background-image: url("/cute_boy_1_24.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	background-clip: padding-box;
-	border-radius: 10px;
-} */
 
 .imageMask {
 	position: absolute;
@@ -283,7 +265,7 @@
 	height: 100vh;
 	width: 100vw;
 
-	z-index: 10;
+	z-index: 20;
 	transition: opacity 450ms ease 400ms;
 }
 
