@@ -1,0 +1,125 @@
+
+/* .page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+  padding: 80px;
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+} */
+
+.page {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.gifContainer {
+  height: auto;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif {
+  height: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+}
+
+.textContainer {
+  margin-top: -16px;
+}
+
+.textContainer,
+.buttonContainer {
+  font-family: var(--font-poppins);
+  font-size: 24px;
+}
+
+.buttonContainer {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.buttonContainer > button {
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: .25rem;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #fcfcfc;
+
+  text-transform: none;
+}
+
+.buttonContainer > button[data-nocount="25"] {
+  font-size: 50px!important;
+  width: 80vw;
+}
+
+.buttonContainer > button:first-child {
+  background-color: #56d17d;
+}
+
+.buttonContainer > button:last-child:not(button:first-child) {
+  background-color: red;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+} */
+
+
+
+/* Enable hover only on non-touch devices */
+/* @media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+} */
