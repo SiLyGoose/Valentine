@@ -10,15 +10,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "next": "15.1.6",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "bootstrap": "^5.3.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
-    "bootstrap": "^5.3.3",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
