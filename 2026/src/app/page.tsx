@@ -3,10 +3,7 @@ import { Metadata } from 'next';
 import css from './page.module.css';
 import { useEffect, useRef, useState } from 'react';
 
-export const metadata: Metadata = {
-  title: '2026 Sack',
-  description: "Valentine's Day 2026",
-};
+
 
 export default function Home() {
   const [hasOpenedLetter, setHasOpenedLetter] = useState(false);
