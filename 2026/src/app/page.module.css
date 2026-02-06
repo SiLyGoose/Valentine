@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.root {
+
+  background-image: url('/background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.envelopeContainer {
+  width: 70vw;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelopeContainer > img {
+  animation: pulse 2s infinite;
+}
+
+.letterContainer {
+  position: relative;
+}
+
+.window {
+  width: 90vw;
+  max-width: 800px;
+  aspect-ratio: 3 / 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 12px;
+  padding-top: 180px;
+
+  background-image: url('/window.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.window > img {
+  width: 125px;
+  margin-block: 10px;
+}
+
+.window > strong {
+  font-size: 24px;
+}
+
+.window > p {
+  font-weight: 500;
+}
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.buttonContainer > .button {
+  width: 120px;
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
